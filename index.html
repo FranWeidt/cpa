@@ -1,0 +1,336 @@
+﻿<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+
+
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Consulte seu ISA, IPPGR3 e IPEI:</span></div>
+     <!--  <h3>Comissão Própria de Avaliação (CPA)</h3>
+<p>Consultar ISA, IPPGR3 e IPEI:</p>
+<p>Digite o CPF ao lado:</p>	  -->
+	  <h3>Digite o CPF ao lado.</h3>
+	  
+      
+      
+    </div>
+    <div class="w3-col m7">
+      
+      <div class="w3-section">      
+        <label>CPF</label>
+        <input class="w3-input" onkeypress="mascara(this, cpf)" type="text" id="cpf" required>
+		<p id="demo"></p>
+
+
+
+      </div>
+      
+    
+      <button onclick="displayDate()" class="w3-button w3-right w3-theme">Consultar</button>
+     
+    </div>
+  </div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Comissão Própria de Avaliação (CPA) - Estácio JF</h2>
+<p>Para facilitar blablablabalbalabla....</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="w3images/fjords.jpg" alt="Vernazza" style="width:100%">
+  <div class="w3-container">
+  <h3>ISA</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div> 
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="w3images/lights.jpg" alt="Cinque Terre" style="width:100%">
+  <div class="w3-container">
+  <h3>IPEI</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="w3images/mountains.jpg" alt="Monterosso" style="width:100%">
+  <div class="w3-container">
+  <h3>IPPGR3</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+var txt = "";
+function displayDate(){
+
+var x = document.getElementById("cpf").value;
+
+var numbers = 
+[["26.523.219.860",	9.80],
+["7.990.128.667",	9.69],
+["5.470.470.610",	9.59],
+["1.392.132.606",	9.55],
+["4.206.041.628",	9.45],
+["3.322.089.665",	9.43],
+["11.338.107.640",	9.36],
+["10.257.638.660",	9.35],
+["5.533.523.693",	9.34],
+["5.916.129.688",	9.33],
+["10.199.257.604",	9.33],
+["5.689.698.636",	9.27],
+["5.468.225.689",	9.25],
+["5.757.296.607",	9.25],
+["77.340.191.615",	9.25],
+["8.176.780.774",	9.25],
+["3.692.484.658",9.23],
+["77.816.846.649",	9.20],
+["8.141.173.685",	9.19],
+["2.896.209.611",	9.18],
+["462.710.661",	9.18],
+["58.790.306.600",	9.16],
+["5.632.782.697",	9.15],
+["4.053.658.616",	9.15],
+["4.892.596.698",	9.13],
+["28.125.453.806",	9.11],
+["3.238.965.611",	9.07],
+["1.392.128.684",	9.03],
+["98.286.811.615",	9.02],
+["89.849.159.634",	9.02],
+["7.677.864.678",	9.01],
+["3.796.449.670",	9.01],
+["5.235.668.677",	9.00],
+["2.589.487.797",	9.00],
+["5.836.737.673",	8.99],
+["3.775.539.646",	8.98],
+["1.399.880.683",	8.96],
+["6.748.146.658",	8.96],
+["4.929.190.622",	8.96],
+["9.813.433.680",	8.93],
+["4.453.898.690",	8.93],
+["13.151.034.780",	8.92],
+["3.880.156.670",	8.91],
+["34.031.417.802",	8.91],
+["3.405.870.674",	8.90],
+["6.004.100.641",	8.90],
+["576.601.667",	8.90],
+["2.841.071.669",	8.90],
+["7.184.538.676",	8.89],
+["3.753.868.663",	8.88],
+["67.539.718.668",	8.88],
+["2.548.137.635",	8.87],
+["88.601.773.672",	8.86],
+["5.000.541.693",	8.85],
+["1.383.420.670",	8.85],
+["7.137.442.609",	8.85],
+["266.341.632",	8.84],
+["6.976.137.637",	8.84],
+["5.721.217.685",	8.83],
+["38.267.241.604",	8.82],
+["11.079.299.629",	8.80],
+["1.334.559.635",	8.80],
+["4.675.850.677",	8.79],
+["84.393.262.620",	8.78],
+["6.789.844.686",	8.76],
+["38.133.008.620",	8.75],
+["3.381.348.671",	8.72],
+["8.462.817.676",	8.72],
+["61.495.611.787",	8.71],
+["8.034.166.600",	8.69],
+["79.657.087.600",	8.69],
+["75.445.760.782",	8.68],
+["94.071.578.572",	8.68],
+["4.261.610.680",	8.67],
+["7.498.215.667",	8.67],
+["10.650.716.639",	8.66],
+["7.156.328.689",	8.66],
+["80.567.053.687",	8.66],
+["58.798.803.620",	8.63],
+["1.379.824.613",	8.62],
+["3.415.206.670",	8.62],
+["77.031.253.934",	8.61],
+["5.558.297.662",	8.60],
+["2.429.876.647",	8.58],
+["91.431.964.620",	8.58],
+["4.029.753.671",	8.58],
+["14.219.094.725",	8.57],
+["33.446.040.668",	8.56],
+["4.180.328.666",	8.56],
+["4.160.344.623",	8.55],
+["12.293.323.757",	8.54],
+["45.360.227.672",	8.54],
+["27.372.395.836",	8.53],
+["50.423.410.644",	8.53],
+["28.348.516.620",	8.53],
+["4.614.014.607",	8.52],
+["8.158.672.639",	8.52],
+["11.416.938.796",	8.52],
+["67.721.389.615",	8.52],
+["6.891.606.667",	8.51],
+["90.649.753.615",	8.50],
+["4.178.822.705",	8.49],
+["7.759.820.674",	8.48],
+["12.304.990.754",	8.48],
+["94.617.260.668",	8.46],
+["3.639.591.658",	8.43],
+["8.039.782.600",	8.43],
+["28.447.913.600",	8.42],
+["6.253.619.624",	8.39],
+["1.186.285.699",	8.39],
+["78.858.763.734",	8.38],
+["1.277.849.692",	8.38],
+["10.182.260.607",	8.37],
+["3.536.641.628",	8.35],
+["8.104.054.660",	8.33],
+["76.586.804.604",	8.31],
+["1.415.866.643",	8.31],
+["569.898.650",	8.31],
+["9.489.756.792",	8.30],
+["8.045.056.754",	8.30],
+["10.139.837.698",	8.29],
+["95.869.344.620",	8.29],
+["1.591.572.690",	8.29],
+["90.603.370.691",	8.28],
+["3.835.001.680",	8.28],
+["83.599.827.672",	8.24],
+["2.892.270.626",	8.24],
+["9.144.874.693",	8.19],
+["1.405.177.667",	8.19],
+["96.484.012.687",	8.17],
+["98.273.094.634",	8.17],
+["4.397.792.607",	8.16],
+["28.091.884.672",	8.15],
+["5.638.141.600",	8.15],
+["1.383.664.625",	8.12],
+["3.525.525.656",	8.11],
+["8.332.008.794",	8.11],
+["10.779.335.686",	8.10],
+["2.827.673.711",	8.08],
+["575.614.609",	8.03],
+["5.528.113.601",	8.02],
+["1.225.852.676",	7.99],
+["72.225.319.634",	7.94],
+["8.514.699.652",	7.90],
+["33.242.011.600",	7.88],
+["7.450.625.636",	7.86],
+["2.687.587.788",	7.83],
+["4.132.414.671",	7.74],
+["10.973.821.760",	7.39],
+["7.693.781.617",7.33],
+["78.663.180.772", 7.11],
+["1.643.899.627",	6.86]];
+
+numbers.forEach(exibeDados);
+document.getElementById("demo").innerHTML = txt;
+
+}
+function mascara(o,f){
+    v_obj=o
+    v_fun=f
+    setTimeout("execmascara()",1)
+}
+function execmascara(){
+    v_obj.value=v_fun(v_obj.value)
+}
+
+function cpf(v){
+    v=v.replace(/\D/g,"")                    //Remove tudo o que não é dígito
+    v=v.replace(/(\d{3})(\d)/,"$1.$2")       //Coloca um ponto entre o terceiro e o quarto dígitos
+    v=v.replace(/(\d{3})(\d)/,"$1.$2")       //Coloca um ponto entre o terceiro e o quarto dígitos
+                                             //de novo (para o segundo bloco de números)
+    v=v.replace(/(\d{3})(\d{1,2})$/,"$1-$2") //Coloca um hífen entre o terceiro e o quarto dígitos
+    return v
+}
+
+function exibeDados(value) {
+var c = document.getElementById("cpf").value.replace(/\D/g,"");
+
+var c2 = value[0].replace(/\D/g,"");
+if(Number(c) == c2){
+  txt =   " Seu ISA em 2018.2 foi " + value[1] +".<br>"; 
+  }
+}
+
+
+</script>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+
+function w3_open() {
+    var x = document.getElementById("mySidebar");
+    x.style.width = "300px";
+    x.style.paddingTop = "10%";
+    x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html>
