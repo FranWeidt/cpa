@@ -101,9 +101,10 @@ A ferramenta tem como objetivo proporcionar maior transparência e simplicidade 
 <script>
 var txt = "";
 var entrou = false;
+var cpf;
 function displayDate(){
 
-var x = document.getElementById("cpf").value;
+cpf = document.getElementById("cpf").value;
 
 var numbers = 
 [["26.523.219.860",	9.80],
@@ -264,9 +265,9 @@ if(entrou){
 document.getElementById("demo").innerHTML = txt;
 entrou = false;
 }else{
-document.getElementById("cpf").value = "";
+//document.getElementById("cpf").value = "";
 txt = "";
-//txt = "CPF não encontrado.";
+txt = "CPF não encontrado na base de ISA. <br>";
 
 }
 
@@ -444,7 +445,17 @@ var numbers2=
 ["58798803620",	0.0,	92.0]];
 
 numbers2.forEach(exibeDadosIPPGR3);
+
+if(entrou){
 document.getElementById("demo").innerHTML = txt;
+entrou = false;
+}else{
+//document.getElementById("cpf").value = "";
+//txt = "";
+txt = txt + "CPF não encontrado na base de IPPGR3. <br>";
+
+}
+
 
 var numbers3 = [["13151034780",	880.0],
 ["5220038699",	830.0],
@@ -582,6 +593,15 @@ var numbers3 = [["13151034780",	880.0],
 ["58798803620",	20.0]];
 
 numbers3.forEach(exibeDadosIPEI);
+if(entrou){
+document.getElementById("demo").innerHTML = txt;
+entrou = false;
+}else{
+//document.getElementById("cpf").value = "";
+//txt = "";
+txt = txt + "CPF não encontrado na base de IPEI.<br>";
+
+}
 document.getElementById("demo").innerHTML = txt;
 
 
@@ -619,8 +639,9 @@ var c = document.getElementById("cpf").value.replace(/\D/g,"");
 
 var c2 = value[0].replace(/\D/g,"");
 if(Number(c) == c2){
+
   txt = txt +  " Seu <strong>IPPGR3</strong> em 2018.2 foi <strong>" + value[1] +"</strong> e sua meta para 2019 é <strong>"+ value[2] +"</strong>.<br>"; 
- 
+  entrou = true;
   }
 }
 function exibeDadosIPEI(value) {
@@ -628,8 +649,9 @@ var c = document.getElementById("cpf").value.replace(/\D/g,"");
 
 var c2 = value[0].replace(/\D/g,"");
 if(Number(c) == c2){
+
   txt = txt +  " Seu <strong>IPEI</strong> em 2018.2 foi <strong>" + value[1] +"</strong>.<br>"; 
- 
+  entrou = true;
   }
 }
 
